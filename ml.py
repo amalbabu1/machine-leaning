@@ -15,9 +15,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-data = pd.read_csv(r'E:\development\New folder\creditcard.csv')#load data set
+data = pd.read_csv(r'E:\development\New folder\creditcard.csv')
 print(data.columns)
-data = data.sample(frac=0.1, random_state = 1)#take only 0.1 percnt of total  data
+data = data.sample(frac=0.1, random_state = 1)
 Fraud = data[data['Class'] == 1]
 Valid = data[data['Class'] == 0]
 outlier_fraction = len(Fraud)/float(len(Valid))
